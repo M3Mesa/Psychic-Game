@@ -53,17 +53,17 @@
                 wins++;
             } 
             else {  
-                losses++;
-            }
-            
-            for (var guessesLeft = 10; guessesLeft < 10; guessesLeft--) {
                 guessesLeft--;
+               
+               if (guessesLeft === 0) {
+                   losses++;
+               }
             }
            
            // Console log to make sure the code computations are working
-            console.log(wins);
-            console.log(losses);
-            console.log(guessesLeft);
+            console.log("Wins " + wins);
+            console.log("Losses " + losses);
+            console.log("Guesses Left " + guessesLeft);
 
             // Hide the directions
             directionsText.textContent = "";
